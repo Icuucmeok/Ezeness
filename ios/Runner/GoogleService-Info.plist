@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBqD7Jhz42AnRZZxrHcGpeNCH0Gg_0BFuE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>941513752515</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ezeness.utagup</string>
+	<key>PROJECT_ID</key>
+	<string>ezeness-c38c5</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ezeness-c38c5.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:941513752515:ios:82fcf6fed266024a50c776</string>
+    <key>CLIENT_ID</key>
+    <string>508368550655-a3m47897b7p94499ga5mjhfqd73toked.apps.googleusercontent.com</string>
+    <key>REVERSED_CLIENT_ID</key>
+    <string>com.googleusercontent.apps.508368550655-a3m47897b7p94499ga5mjhfqd73toked</string>
+</dict>
+</plist>
