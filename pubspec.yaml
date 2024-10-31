@@ -21,13 +21,13 @@ dependencies:
   wechat_assets_picker: ^9.0.3
   permission_handler: ^11.3.1
   font_awesome_flutter: ^10.7.0
-  image_cropper: ^8.0.2  
+  image_cropper:
   video_editor: ^3.0.0
   fraction: ^5.0.2
   iconly: ^1.0.1
   compressor:
     git:
-      url: https://gitlab.com/omar99.hl/compressor.git
+      url: https://gitlab.com/ezeness3/compressor.git
       ref: main
   path_provider: any
   stack_board: ^0.2.4
