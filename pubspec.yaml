@@ -14,11 +14,11 @@ dependencies:
   carousel_slider: ^5.0.0
   compressor:
     git:
-      url: https://gitlab.com/omar99.hl/compressor.git
+      url: https://gitlab.com/ezeness3/compressor.git
       ref: main
   media_library:
     git:
-      url: https://gitlab.com/omar99.hl/media_library.git
+      url: https://gitlab.com/ezeness3/media_library.git
       ref: 1.0.1
   country_code_picker: ^3.0.0
   cupertino_icons: ^1.0.2
