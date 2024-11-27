@@ -174,8 +174,8 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: c2766482e42e0758ebb1fee73f830a3052c77f79
-      url: "https://gitlab.com/omar99.hl/compressor.git"
+      resolved-ref: "79b865dcf9125bac1c1838161eecdab80c6c3194"
+      url: "https://gitlab.com/ezeness3/compressor.git"
     source: git
     version: "0.0.1"
   country_code_picker:
@@ -1146,9 +1146,9 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "1.0.1"
-      resolved-ref: "154902f09669e7be16c468e1ba1dba9379ca31a2"
-      url: "https://gitlab.com/omar99.hl/media_library.git"
+      ref: main
+      resolved-ref: "62cd72230385a31611266b345c8dbd68f12abf31"
+      url: "https://gitlab.com/ezeness3/media_library.git"
     source: git
     version: "1.0.1"
   media_picker_widget:

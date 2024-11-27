@@ -19,7 +19,7 @@ dependencies:
   media_library:
     git:
       url: https://gitlab.com/ezeness3/media_library.git
-      ref: 1.0.1
+      ref: main
   country_code_picker: ^3.0.0
   cupertino_icons: ^1.0.2
   device_preview: ^1.2.0
