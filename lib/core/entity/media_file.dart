@@ -1,10 +1,11 @@
 import 'dart:io';
 import 'dart:typed_data';
 
+import 'package:ffmpeg_kit_flutter/return_code.dart';
+import 'package:flutter/material.dart';
+import 'package:ffmpeg_kit_flutter/ffmpeg_kit.dart';
 import 'package:media_library/core/enums.dart';
 import 'package:media_library/core/extension/extensions.dart';
-import 'package:media_library/src/widgets/image_editor/vs_story_designer/src/domain/models/editable_items.dart';
-import 'package:media_library/src/widgets/video_editor/video_painter/src/enums/editable_item_type.dart';
 import 'package:media_library/src/widgets/video_editor/video_painter/src/models/graphic_info.dart';
 import 'package:wechat_assets_picker/wechat_assets_picker.dart';
 
@@ -88,10 +89,7 @@ class MediaFile {
     AssetSourceType? assetSourceType,
     VideoEditableItem? videoEditableItem,
   }) {
-    // List<VideoEditableItem>? newList = null;
     if (videoEditableItem != null) {
-      // final newList = this.videoEditableItems;
-      // newList?.add(videoEditableItems);
       videoEditableItems!.add(videoEditableItem);
     }
 
@@ -116,5 +114,44 @@ class MediaFile {
 
   File? getFile() {
     return File(path);
+  }
+
+  /// Trims the video and saves to a new path.
+  Future<String?> trimVideo({
+    required int startTime,
+    required int endTime,
+  }) async {
+    final String outputPath = path.replaceAll(
+      RegExp(r'\.mp4$'),
+      '_trimmed.mp4',
+    );
+
+    String command = "-i $path -ss $startTime -to $endTime -c copy $outputPath";
+    await FFmpegKit.execute(command).then((session) async {
+      final returnCode = await session.getReturnCode();
+      if (ReturnCode.isSuccess(returnCode)) {
+        print("Trimmed video saved at: $outputPath");
+        return outputPath;
+      } else {
+        print("Error trimming video: ${await session.getFailStackTrace()}");
+        return null;
+      }
+    });
+
+    return outputPath;
+  }
+}
+
+
+void main() async {
+  final mediaFile = MediaFile.fromFile(File("/path/to/video.mp4"));
+
+  // Trim video from 10 seconds to 30 seconds
+  final trimmedVideoPath = await mediaFile.trimVideo(startTime: 10, endTime: 30);
+
+  if (trimmedVideoPath != null) {
+    print("Trimmed video saved at: $trimmedVideoPath");
+  } else {
+    print("Trimming failed.");
   }
 }
