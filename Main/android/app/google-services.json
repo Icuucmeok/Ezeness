@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "941513752515",
+    "project_id": "ezeness-c38c5",
+    "storage_bucket": "ezeness-c38c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941513752515:android:363d958c540d4f3950c776",
+        "android_client_info": {
+          "package_name": "com.ezeness.utagup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiKsaE5riPmpmQ3ORPQXSX4YiqM_DRhJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
