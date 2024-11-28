@@ -1,1 +1,0 @@
-enum RenderType { gif, video }
