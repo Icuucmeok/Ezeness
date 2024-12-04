@@ -12,14 +12,16 @@ dependencies:
   animations: ^2.0.2
   cached_network_image: ^3.2.3
   carousel_slider: ^5.0.0
-  compressor:
-    git:
-      url: https://gitlab.com/ezeness3/compressor.git
-      ref: main
-  media_library:
-    git:
-      url: https://gitlab.com/ezeness3/media_library.git
-      ref: main
+#  compressor:
+#    git:
+#      url: https://gitlab.com/ezeness3/compressor.git
+#      ref: main
+#  media_library:
+#    git:
+#      url: https://gitlab.com/ezeness3/media_library.git
+#      ref: main
+  compressor: ^1.0.0
+
   country_code_picker: ^3.0.0
   cupertino_icons: ^1.0.2
   device_preview: ^1.2.0

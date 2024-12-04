@@ -1,17 +1,16 @@
 import 'dart:io';
 
-import 'package:compressor/compressor.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:media_library/core/entity/media_file.dart';
 import 'package:video_player/video_player.dart';
-import 'package:video_thumbnail/video_thumbnail.dart';
 import 'package:wechat_assets_picker/wechat_assets_picker.dart';
 import '../../core/enums.dart';
 import '../../core/extension/extensions.dart';
 import 'package:path_provider/path_provider.dart';
 
 import '../../core/utils/get_path.dart';
+import '../../pkg/compressor-main/lib/compressor.dart';
 
 class MediaController with ChangeNotifier, DiagnosticableTreeMixin {
   List<MediaFile> _pickedFiles = [];
