@@ -1,0 +1,166 @@
+name: ezeness
+description: Ezeness App .
+
+publish_to: "none"
+
+version: 1.0.51+61
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  animations:
+  cached_network_image:
+  carousel_slider:
+  compressor:
+    path: ../compressor-main
+#
+
+#  compressor:
+#    git:
+#      url: https://github.com/Icuucmeok/Ezeness
+#      path: compressor-main
+#      ref: main
+  # Add media_library package
+  media_library:
+    path: ../media_library-main
+
+#dependency_overrides:
+#  media_library:
+#        git:
+#          url: https://github.com/Icuucmeok/Ezeness
+#          path: media_library-main
+#          ref: main
+
+  country_code_picker:
+  cupertino_icons:
+  device_preview:
+  equatable:
+  firebase_core:
+  firebase_messaging:
+  flutter:
+    sdk: flutter
+  flutter_bloc:
+  flutter_colorpicker:
+  flutter_local_notifications:
+  flutter_rounded_date_picker:
+  flutter_screenutil:
+  flutter_social_textfield:
+  flutter_staggered_grid_view:
+  flutter_stripe:
+  flutter_svg:
+  flutter_widget_from_html:
+  fluttertoast:
+  geocoding:
+  geolocator:
+  google_maps_place_picker_mb:
+  http:
+  iconly:
+  intl:
+  keep_screen_on:
+  media_picker_widget:
+  package_info_plus:
+  path_provider:
+  pull_to_refresh:
+  qr_flutter:
+  receive_sharing_intent:
+  responsive_grid:
+  rxdart:
+  share_plus:
+  shared_preferences:
+  shimmer:
+  timeago:
+  uni_links:
+  upgrader:
+  url_launcher:
+  video_player:
+  video_thumbnail:
+  visibility_detector:
+  google_sign_in:
+  sign_in_with_apple:
+  google_sign_in_ios:
+  fluttertagger:
+  dropdown_search:
+dev_dependencies:
+  flutter_launcher_icons:
+  flutter_localizations:
+    sdk: flutter
+  flutter_test:
+    sdk: flutter
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/icon.png"
+  image_path_ios: "assets/images/border_icon.png"
+  min_sdk_android: 21
+
+  flutter_lints:
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  fonts:
+    - family: Lato
+      fonts:
+        - asset: assets/fonts/Lato-Regular.ttf
+        - asset: assets/fonts/Lato-Bold.ttf
+          weight: 700
+    - family: Tajawal
+      fonts:
+        - asset: assets/fonts/Tajawal-Regular.ttf
+    - family: Vazir
+      fonts:
+        - asset: assets/fonts/Vazir-Regular.ttf
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Regular.ttf
+        - asset: assets/fonts/poppins/Poppins-Italic.ttf
+          style: italic
+        - asset: assets/fonts/poppins/Poppins-Black.ttf
+          weight: 900
+        - asset: assets/fonts/poppins/Poppins-BlackItalic.ttf
+          weight: 900
+          style: italic
+        - asset: assets/fonts/poppins/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/poppins/Poppins-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/poppins/Poppins-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/poppins/Poppins-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: assets/fonts/poppins/Poppins-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/poppins/Poppins-ExtraLightItalic.ttf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/poppins/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/fonts/poppins/Poppins-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/poppins/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/poppins/Poppins-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/poppins/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/poppins/Poppins-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/poppins/Poppins-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/poppins/Poppins-ThinItalic.ttf
+          weight: 100
+          style: italic
+
+flutter_intl:
+  enabled: true
