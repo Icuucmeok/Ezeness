@@ -26,6 +26,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
+import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertagger/fluttertagger.dart';
 import 'package:geolocator/geolocator.dart';
@@ -34,6 +35,7 @@ import 'package:google_maps_place_picker_mb/google_maps_place_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:media_library/core/entity/media_file.dart';
 import 'package:media_library/media_library.dart';
+import 'package:video_compress/video_compress.dart';
 
 import '../../../../data/models/app_file.dart';
 import '../../../../data/models/category/category.dart';
@@ -196,13 +198,10 @@ class _AddEditPostScreenState extends State<AddEditPostScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return PopScope(
-      canPop: false,
-      onPopInvokedWithResult: (bool didPop, Object) {
-        if (didPop) {
-          return;
-        }
+    return WillPopScope(
+      onWillPop: () async {
         previousPage();
+        return Future.value(false);
       },
       child: SafeArea(
         child: Scaffold(
@@ -428,11 +427,12 @@ class _AddEditPostScreenState extends State<AddEditPostScreen> {
                         validator: (text) {
                           return TextInputValidator(minLength: 7, validators: [
                             InputValidator.minLength,
-                            if(postType == Constants.callUpKey)
+                            if (postType == Constants.callUpKey)
                               InputValidator.requiredField
                           ]).validate(text);
                         },
-                        countryCodeController: contactNumberCountryCodeController,
+                        countryCodeController:
+                            contactNumberCountryCodeController,
                       ),
                       SizedBox(height: 20),
                       _buildKidsContent(context),
@@ -1815,22 +1815,43 @@ class _AddEditPostScreenState extends State<AddEditPostScreen> {
     );
   }
 
-  void addEditPostFunction() {
+  Future<void> addEditPostFunction() async {
     checkLocationError();
     if (postType != Constants.postUpKey) {
       if (!_vipKeyForm.currentState!.validate() || locationError) {
-        return;
+        return null;
       }
     }
     if (postType == Constants.postUpKey) {
       if (!_postDetailsKeyForm.currentState!.validate() || locationError) {
-        return;
+        return null;
       }
     }
     for (int i = 0; i < mediaList.length; i++) {
-      uploadFiles.add(AppFile(
-          file: mediaList[i].getFile()!, fileKey: AddPostBody.imageKey));
+      final File originalFile = mediaList[i].getFile()!;
+      final String fileExtension =
+          originalFile.path.split('.').last.toLowerCase();
+
+      File? compressedFile;
+
+      if (['jpg', 'jpeg', 'png'].contains(fileExtension)) {
+        compressedFile = await compressImage(originalFile);
+      } else if (['mp4', 'mov', 'avi'].contains(fileExtension)) {
+        compressedFile = await compressVideo(originalFile);
+      } else {
+        compressedFile =
+            originalFile; // Skip compression for unsupported formats
+      }
+
+      uploadFiles
+          .add(AppFile(file: compressedFile!, fileKey: AddPostBody.imageKey));
     }
+
+    // for (int i = 0; i < mediaList.length; i++) {
+    //   print(mediaList[i].getFile()!.readAsBytes());
+    //   uploadFiles.add(AppFile(
+    //       file: mediaList[i].getFile()!, fileKey: AddPostBody.imageKey));
+    // }
     uploadBody = AddPostBody(
       description: captionController.text,
       additionalInfo: additionalInfoController.text,
@@ -1858,7 +1879,9 @@ class _AddEditPostScreenState extends State<AddEditPostScreen> {
           : "0",
       deliveryChargeCurrency: currency?.currency,
       categoryOptionList: categoryOptionList,
-      contactNumber: contactNumberController.text.isEmpty ? null : contactNumberController.text,
+      contactNumber: contactNumberController.text.isEmpty
+          ? null
+          : contactNumberController.text,
       contactNumberCode: contactNumberCountryCodeController.text,
       lat: pickLocation?.lat.toString(),
       lng: pickLocation?.lng.toString(),
@@ -1866,6 +1889,52 @@ class _AddEditPostScreenState extends State<AddEditPostScreen> {
     );
 
     _addEditPostCubit.validatePost(uploadBody);
+  }
+
+  Future<File?> compressImage(File file) async {
+    // print("original file size: ${await file.length()} bytes");
+
+    final String targetPath =
+        "${file.parent.path}/${DateTime.now().millisecondsSinceEpoch}.jpg";
+
+    var result = await FlutterImageCompress.compressAndGetFile(
+      file.absolute.path, // Original file path
+      targetPath, // Compressed file path
+      quality: 70, // Compression quality (1-100, lower means more compression)
+    );
+
+    if (result != null) {
+      // print("Compressed file size: ${await result.length()} bytes");
+      return File(result.path);
+    } else {
+      print("Compression failed. Returning original file.");
+      return file; // Return the original file if compression fails
+    }
+    // File res = File(result!.path);
+    //
+    // return res;
+    // ?? file; // Return the compressed file or original if compression fails
+  }
+
+  Future<File> compressVideo(File file) async {
+    // print("original video file size: ${await file.length()} bytes");
+    final MediaInfo? info = await VideoCompress.compressVideo(
+      file.path,
+      quality: VideoQuality.MediumQuality, // Compression quality
+      deleteOrigin: false, // Whether to delete the original file
+    );
+
+    if (info?.file != null) {
+      File compressedFile = File(info!.file!.path);
+      // print(
+      //     "Compressed video file size: ${await compressedFile.length()} bytes");
+      return compressedFile;
+    } else {
+      print("Compression failed. Returning original file.");
+      return file;
+    }
+    // return File(info?.file?.path ??
+    //     file.path); // Return compressed file or original if compression fails
   }
 
   DropdownSearch<CurrencyModel> _buildSelectCurrency(BuildContext context) {
