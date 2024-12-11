@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:developer';
-import 'package:compressor/compressor.dart';
 import 'package:ezeness/data/models/pick_location_model.dart';
 import 'package:ezeness/data/repositories/app_config_repository.dart';
 import 'package:ezeness/data/utils/api_deserializer.dart';
@@ -15,6 +14,7 @@ import 'package:path_provider/path_provider.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:io' show Directory, File, Platform;
+import '../../pkg/media_library-main/lib/pkg/compressor-main/lib/compressor.dart';
 import '../models/app_file.dart';
 import '../models/auth/login_response.dart';
 import '../models/country_model.dart';

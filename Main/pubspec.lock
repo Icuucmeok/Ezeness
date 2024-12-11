@@ -9,14 +9,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.35"
-  align_positioned:
-    dependency: transitive
-    description:
-      name: align_positioned
-      sha256: "90899a9a21259a608402d109fde83068e375042703c9c7d2c31c936a443e55f5"
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.0.1"
   animations:
     dependency: "direct main"
     description:
@@ -97,14 +89,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.1"
-  camerawesome:
-    dependency: transitive
-    description:
-      name: camerawesome
-      sha256: "3619d5605fb14ab72c815532c1d9f635512c75df07b5a742b60a9a4b03b6081e"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.1.0"
   carousel_slider:
     dependency: "direct main"
     description:
@@ -161,23 +145,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.18.0"
-  colorfilter_generator:
-    dependency: transitive
-    description:
-      name: colorfilter_generator
-      sha256: ccc2995e440b1d828d55d99150e7cad64624f3cb4a1e235000de3f93cf10d35c
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.8"
-  compressor:
-    dependency: "direct main"
-    description:
-      path: "."
-      ref: main
-      resolved-ref: "79b865dcf9125bac1c1838161eecdab80c6c3194"
-      url: "https://gitlab.com/ezeness3/compressor.git"
-    source: git
-    version: "0.0.1"
   country_code_picker:
     dependency: "direct main"
     description:
@@ -258,14 +225,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
-  dotted_border:
-    dependency: transitive
-    description:
-      name: dotted_border
-      sha256: "108837e11848ca776c53b30bc870086f84b62ed6e01c503ed976e8f8c7df9c04"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.1.0"
   dropdown_search:
     dependency: "direct main"
     description:
@@ -282,22 +241,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.5"
-  extended_image:
-    dependency: transitive
-    description:
-      name: extended_image
-      sha256: "69d4299043334ecece679996e47d0b0891cd8c29d8da0034868443506f1d9a78"
-      url: "https://pub.dev"
-    source: hosted
-    version: "8.3.1"
-  extended_image_library:
-    dependency: transitive
-    description:
-      name: extended_image_library
-      sha256: "9a94ec9314aa206cfa35f16145c3cd6e2c924badcc670eaaca8a3a8063a68cd7"
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.0.5"
   fake_async:
     dependency: transitive
     description:
@@ -439,14 +382,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0"
-  flutter_drawing_board:
-    dependency: transitive
-    description:
-      name: flutter_drawing_board
-      sha256: "82700847d7f367c9af1eaf186c88f74a6be821dbe783871e4736bf724f015192"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.7.0+2"
   flutter_google_maps_webservices:
     dependency: transitive
     description:
@@ -590,22 +525,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "8.2.8"
-  font_awesome_flutter:
-    dependency: transitive
-    description:
-      name: font_awesome_flutter
-      sha256: "275ff26905134bcb59417cf60ad979136f1f8257f2f449914b2c3e05bbb4cd6f"
-      url: "https://pub.dev"
-    source: hosted
-    version: "10.7.0"
-  fraction:
-    dependency: transitive
-    description:
-      name: fraction
-      sha256: ac0d9904bb8211eb28606bdf623ff9f222c53240d8e9b927a07c149d356eddc2
-      url: "https://pub.dev"
-    source: hosted
-    version: "5.0.3"
   freezed_annotation:
     dependency: transitive
     description:
@@ -750,14 +669,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.3"
-  google_fonts:
-    dependency: transitive
-    description:
-      name: google_fonts
-      sha256: b1ac0fe2832c9cc95e5e88b57d627c5e68c223b9657f4b96e1487aa9098c7b82
-      url: "https://pub.dev"
-    source: hosted
-    version: "6.2.1"
   google_identity_services_web:
     dependency: transitive
     description:
@@ -862,14 +773,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.12.4+2"
-  hsv_color_pickers:
-    dependency: transitive
-    description:
-      name: hsv_color_pickers
-      sha256: "3bfa978ad1ef2d19746c947aae37d4eb1a1dbab3ca4aa35d35005caf6b03560f"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.3.0"
   html:
     dependency: transitive
     description:
@@ -886,14 +789,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.2"
-  http_client_helper:
-    dependency: transitive
-    description:
-      name: http_client_helper
-      sha256: "8a9127650734da86b5c73760de2b404494c968a3fd55602045ffec789dac3cb1"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.0.0"
   http_parser:
     dependency: transitive
     description:
@@ -918,38 +813,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.2.0"
-  image_cropper:
-    dependency: transitive
-    description:
-      name: image_cropper
-      sha256: fe37d9a129411486e0d93089b61bd326d05b89e78ad4981de54b560725bf5bd5
-      url: "https://pub.dev"
-    source: hosted
-    version: "8.0.2"
-  image_cropper_for_web:
-    dependency: transitive
-    description:
-      name: image_cropper_for_web
-      sha256: "34256c8fb7fcb233251787c876bb37271744459b593a948a2db73caa323034d0"
-      url: "https://pub.dev"
-    source: hosted
-    version: "6.0.2"
-  image_cropper_platform_interface:
-    dependency: transitive
-    description:
-      name: image_cropper_platform_interface
-      sha256: e8e9d2ca36360387aee39295ce49029362ae4df3071f23e8e71f2b81e40b7531
-      url: "https://pub.dev"
-    source: hosted
-    version: "7.0.0"
-  image_gallery_saver:
-    dependency: transitive
-    description:
-      name: image_gallery_saver
-      sha256: "0aba74216a4d9b0561510cb968015d56b701ba1bd94aace26aacdd8ae5761816"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.3"
   image_picker:
     dependency: transitive
     description:
@@ -1126,31 +989,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.11.1"
-  matrix2d:
-    dependency: transitive
-    description:
-      name: matrix2d
-      sha256: "188718dd3bc2a31e372cfd0791b0f77f4f13ea76164147342cc378d9132949e7"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.4"
-  matrix4_transform:
-    dependency: transitive
-    description:
-      name: matrix4_transform
-      sha256: "42c42610deecc382be2653f4a21358537401bd5b027c168a174c7c6a64959908"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.0.1"
-  media_library:
-    dependency: "direct main"
-    description:
-      path: "."
-      ref: main
-      resolved-ref: "62cd72230385a31611266b345c8dbd68f12abf31"
-      url: "https://gitlab.com/ezeness3/media_library.git"
-    source: git
-    version: "1.0.1"
   media_picker_widget:
     dependency: "direct main"
     description:
@@ -1191,14 +1029,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
-  oktoast:
-    dependency: transitive
-    description:
-      name: oktoast
-      sha256: f1366c5c793ddfb8f55bc6fc3e45db43c45debf173b765fb4c5ec096cbdeb84a
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.4.0"
   os_detect:
     dependency: transitive
     description:
@@ -1231,14 +1061,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.0"
-  path_drawing:
-    dependency: transitive
-    description:
-      name: path_drawing
-      sha256: bbb1934c0cbb03091af082a6389ca2080345291ef07a5fa6d6e078ba8682f977
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.1"
   path_parsing:
     dependency: transitive
     description:
@@ -1295,62 +1117,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.3.0"
-  perfect_freehand:
-    dependency: transitive
-    description:
-      name: perfect_freehand
-      sha256: "6ced289209b3b26dc23c8d21960ceff3d39442cebd8e12ce722c4385c63553e5"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.3.2"
-  permission_handler:
-    dependency: transitive
-    description:
-      name: permission_handler
-      sha256: "18bf33f7fefbd812f37e72091a15575e72d5318854877e0e4035a24ac1113ecb"
-      url: "https://pub.dev"
-    source: hosted
-    version: "11.3.1"
-  permission_handler_android:
-    dependency: transitive
-    description:
-      name: permission_handler_android
-      sha256: "76e4ab092c1b240d31177bb64d2b0bea43f43d0e23541ec866151b9f7b2490fa"
-      url: "https://pub.dev"
-    source: hosted
-    version: "12.0.12"
-  permission_handler_apple:
-    dependency: transitive
-    description:
-      name: permission_handler_apple
-      sha256: e6f6d73b12438ef13e648c4ae56bd106ec60d17e90a59c4545db6781229082a0
-      url: "https://pub.dev"
-    source: hosted
-    version: "9.4.5"
-  permission_handler_html:
-    dependency: transitive
-    description:
-      name: permission_handler_html
-      sha256: af26edbbb1f2674af65a8f4b56e1a6f526156bc273d0e65dd8075fab51c78851
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.1.3+2"
-  permission_handler_platform_interface:
-    dependency: transitive
-    description:
-      name: permission_handler_platform_interface
-      sha256: e9c8eadee926c4532d0305dff94b85bf961f16759c3af791486613152af4b4f9
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.2.3"
-  permission_handler_windows:
-    dependency: transitive
-    description:
-      name: permission_handler_windows
-      sha256: "1a790728016f79a41216d88672dbc5df30e686e811ad4e698bfc51f76ad91f1e"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.2.1"
   petitparser:
     dependency: transitive
     description:
@@ -1367,22 +1133,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.5.0"
-  photo_manager_image_provider:
-    dependency: transitive
-    description:
-      name: photo_manager_image_provider
-      sha256: b0a6d59f34e48c2b9aa52a4a655308c29b0fc4b3931607f9e0e252bc49aef974
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.1.2"
-  photo_view:
-    dependency: transitive
-    description:
-      name: photo_view
-      sha256: "1fc3d970a91295fbd1364296575f854c9863f225505c28c46e0a03e48960c75e"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.15.0"
   platform:
     dependency: transitive
     description:
@@ -1612,14 +1362,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.5.4+4"
-  stack_board:
-    dependency: transitive
-    description:
-      name: stack_board
-      sha256: "7a9f2fb360229992053a9123197cc21753d6cb44a29ea20efbc8f79830841bbb"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.2.6+1"
   stack_trace:
     dependency: transitive
     description:
@@ -1716,14 +1458,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.9.4"
-  transparent_image:
-    dependency: transitive
-    description:
-      name: transparent_image
-      sha256: e8991d955a2094e197ca24c645efec2faf4285772a4746126ca12875e54ca02f
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.1"
   tuple:
     dependency: transitive
     description:
@@ -1884,14 +1618,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.2"
-  video_editor:
-    dependency: transitive
-    description:
-      name: video_editor
-      sha256: "263be52e052118389f372f055f59c2fda5c7beecfdb706b899d2e05be8740c22"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.0.0"
   video_player:
     dependency: "direct main"
     description:
@@ -2012,22 +1738,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.15.0"
-  wechat_assets_picker:
-    dependency: transitive
-    description:
-      name: wechat_assets_picker
-      sha256: a7ca044e5fb4eae1b83ef4fad81d19c7612afe062192482eb164885e4289ba37
-      url: "https://pub.dev"
-    source: hosted
-    version: "9.3.1"
-  wechat_picker_library:
-    dependency: transitive
-    description:
-      name: wechat_picker_library
-      sha256: a42e09cb85b15fc9410f6a69671371cc60aa99c4a1f7967f6593a7f665f6f47a
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.5"
   win32:
     dependency: transitive
     description:
