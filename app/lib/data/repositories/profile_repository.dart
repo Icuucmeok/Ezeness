@@ -42,6 +42,7 @@ class ProfileRepository {
         requestType: HttpRequestType.get,
         headers: apiClient.head(withIsKids: apiClient.isKids == 1),
       );
+      print("Response from API: " + response!.toJson().toString());
     } catch (e, s) {
       throw ErrorHandler(exception: e, stackTrace: s).rethrowError();
     }

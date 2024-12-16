@@ -329,6 +329,7 @@ class User {
       'date_of_birth': birthDate,
       'role': role,
       'type': type,
+      "bio": bio,
       'plan': usernamePlan?.toMap(),
       'store': store?.toMap(),
       'identity_card': identityCard?.toMap(),

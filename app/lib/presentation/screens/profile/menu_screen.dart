@@ -240,7 +240,7 @@ class MenuScreen extends StatelessWidget {
                         ?.copyWith(fontSize: 15),
                   ),
                   Spacer(),
-                  CountryDropDownMenuWidget(),
+                  Expanded(child: CountryDropDownMenuWidget()),
                 ],
               ),
             ),
